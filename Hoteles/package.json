@@ -1,0 +1,20 @@
+{
+  "name": "hoteles",
+  "version": "1.0.0",
+  "description": "trabajo",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elvis",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "open-iconic": "^1.1.1",
+    "popper.js": "^1.16.1"
+  }
+}
