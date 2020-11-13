@@ -6,28 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
     <title>Hoteles</title>
 </head>
 
 <body>
-    <nav>
-        <div class="jumbotron">
-            <h1>Hoteles</h1>
-        </div>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Hoteles</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuOp"
+            aria-controls="navbarNavDropdown" aria-label="Toggle navigation" aria-expanded="false">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div>
-            <ul>
-                <li><a href="#"></a></li>
-                <li><a href="./about.html">Nosotros</a></li>
-                <li><a href="./precios.html">Precios</a></li>
-                <li><a href="#">Terminos</a></li>
-                <li><a href="./contacto.html">Contactos</a></li>
+        <div class="collapse navbar-collapse" id="menuOp">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./abaut.html">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link" href="./precios.html">Precios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Terminos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contacto.html">Contactos</a></li>
             </ul>
         </div>
 
     </nav>
+    <div class="jumbotron">
+        <h1>Hoteles</h1>
+    </div>
 
     <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Home</li>
+            </ol>
+
+        </nav>
         <div class="d-flex flex-wrap flex-row">
             <div class="col-sm-4">
                 <p>
@@ -105,7 +117,7 @@
 
     <footer>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-4 d-flex flex-column">
                 <a href="http://www.facebook.com">facebook</a>
                 <a href="http://www.twitter.com">twitter</a>
                 <a href="http://www.instagram.com">instagram</a>
@@ -119,7 +131,7 @@
                     <p><span class="oi oi-inbox footer-address-icon"> rene525456@gmail.com</span></p>
                 </address>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 d-flex flex-column align-items-end">
                 <a href="http://www.facebook.com">Nosotros</a>
                 <a href="http://www.twitter.com">Precios</a>
                 <a href="http://www.instagram.com">Términos y Condiciones</a>
