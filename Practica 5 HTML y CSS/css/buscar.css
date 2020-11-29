@@ -18,7 +18,7 @@ body {
     top: 20%;
     transform: translate(-50%,-50%);
     background: #069;
-    padding: 30px;
+    padding: 20px;
     height: 80px;
     border-radius: 40px;
 }
@@ -27,7 +27,7 @@ body {
     border: none;
     background: none;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     float: left;
     transition: 0.3s;
 

@@ -1,28 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/cabecera.css">
-        <title>Foto</title>
-    </head>
-    <body>
-        <header>
-            <input type="checkbox" id="btnMenu">
-            <label for="btnMenu"><img src="Imagenes/Iconos/icons8-menu-64.png"></label>
-            <nav class="menu">
-                <ul>
-                    <li><a href=""><img src="Imagenes/Iconos/icons8-home-50.png" width="40"> Home </a></li>
-                    <li><a href=""><img src="Imagenes/Iconos/icons8-search-64.png" width="40"> Buscar </a></li>
-                    <li><a href=""><img src="Imagenes/Iconos/icons8-add-64.png" width="40"> Foto </a></li>
-                    <li><a href=""><img src="Imagenes/Iconos/icons8-heart-64.png" width="40">Favoritas </a></li>
-                    <li><a href=""><img src="Imagenes/Iconos/icons8-safe-out-64.png" width="40"> Logout </a></li>
-                    <li><a href=""><img src="Imagenes/Iconos/icons8-customer-64.png" width="40"> Login </a></li>
-                    <li><a href=""><img src="Imagenes/Iconos/icons8-metal-detector-64.png" width="40"> Registro</a></li>
-                </ul>
-            </nav>
-        </header>
 
-    
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cabecera.css">
+    <link rel="stylesheet" href="css/foto.css">
+    <title>Foto</title>
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="btnMenu">
+        <label for="btnMenu"><img src="Imagenes/Iconos/icons8-menu-64.png"></label>
+        <nav class="menu">
+            <ul>
+                <li><a href=""><img src="Imagenes/Iconos/icons8-home-50.png" width="40"> Home </a></li>
+                <li><a href=""><img src="Imagenes/Iconos/icons8-search-64.png" width="40"> Buscar </a></li>
+                <li><a href=""><img src="Imagenes/Iconos/icons8-add-64.png" width="40"> Foto </a></li>
+                <li><a href=""><img src="Imagenes/Iconos/icons8-heart-64.png" width="40">Favoritas </a></li>
+                <li><a href=""><img src="Imagenes/Iconos/icons8-safe-out-64.png" width="40"> Logout </a></li>
+                <li><a href=""><img src="Imagenes/Iconos/icons8-customer-64.png" width="40"> Login </a></li>
+                <li><a href=""><img src="Imagenes/Iconos/icons8-metal-detector-64.png" width="40"> Registro</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="fotos">
+        <div class="foto-descripcion">
+            <a href="Imagenes/Batman-BossLogic-2.jpg" title="Click para ver foto" target="_blank">
+                <img src="Imagenes/Batman-BossLogic-2.jpg" border = "0" alt=""/>
+            </a><br>
+            <span>
+                Autor: <a href="">Bruce Wills</a>
+                <br>
+                Dimenciones: 450x500.
+                <br>
+                Peso: 2.5 MB
+                <br>
+                Likes : 200
+                <br>
+                Favorita : 4
+                <br> 
+                <a href="#comentarios" title="Click para ir a la seccion de Comentarios">Comentarios</a>: 2
+                <br>
+            </span>
+
+            <a href="" title="Click para ver foto" target="_blank">
+                <img src="Imagenes/b13e990007a1cb25d1cb7566182cd749.jpg" border = "0" alt=""/>
+            </a><br>
+            <span>
+                Autor: <a href="">Bruce Wills</a>
+                <br>
+                Dimenciones: 450x500.
+                <br>
+                Peso: 2.5 MB
+                <br>
+                Likes : 200
+                <br>
+                Favorita : 4
+                <br> 
+                Comentarios : 2
+                <br>
+            </span>
+
+            <a href="" title="Click para ver foto" target="_blank">
+                <img src="Imagenes/page_1_thumb_large.jpg" border = "0" alt=""/>
+            </a><br>
+            <span>
+                Autor: <a href="">Bruce Wills</a>
+                <br>
+                Dimenciones: 450x500.
+                <br>
+                Peso: 2.5 MB
+                <br>
+                Likes : 200
+                <br>
+                Favorita : 4
+                <br> 
+                Comentarios : 2
+            </span>
+        </div>
+
+        <div id="comentarios">
+            <h2>Comentarios</h2>
+            <textarea cols="100" rows="5" placeholder="Ingrese aqui sus comentarios"></textarea>
+        </div>
+    </div>
+
+</body>
+
 </html>

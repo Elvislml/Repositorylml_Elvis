@@ -1,0 +1,62 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial;
+    background-image: url("https://31.media.tumblr.com/41c01e3f366d61793e5a3df70e46b462/tumblr_n4vc8sDHsd1st5lhmo1_1280.jpg");
+}
+
+.foto-descripcion{
+    width: 970px;
+    height: 100px;
+    margin: 25px 10px 0 10px;
+    text-align: center;
+    
+}
+
+
+.fotos img{
+    padding: 10px;
+    display: inline;
+    text-align: center;
+    width: 280px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fotos a:hover{
+    transform: scale(1.25);
+    box-shadow: 0 3px 6px rgb(0,0, 0, .5);
+    position: relative;
+}
+.fotos span{
+    color: white;
+    text-align: center;
+
+}
+
+.fotos img:hover{
+    transform: scale(1.25);
+}
+
+.fotos textarea {
+    font-family: Garamond,verdana;
+    font-size: 18pt;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+
+#comentarios{
+    position: relative;
+    top: 98em;
+}
+
+#comentarios h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
