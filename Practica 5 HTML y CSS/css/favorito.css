@@ -29,6 +29,6 @@ body {
     height: 500px;
 }
 
-.galeria .img-styles{
-    margin-left: 200px;
+.galeria .icon-style:hover{
+    transform: scale(1.50);
 }
