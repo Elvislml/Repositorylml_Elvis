@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background: pink;
+    font-family: sans-serif;
+}
+
+
+.container{
+    max-width: 900px;
+    width: 100%;
+    padding: 45px 20px;
+    margin: 0 auto;
+    margin-top:70px;
+    text-align: justify;
+    border: 4px solid red;
+}
+
+.informacionUser{
+    max-width: 700px;
+    width: 100%;
+    padding: 30px 5px;
+    margin: 0 auto;
+    margin-top: 90px;
+    text-align: justify;
+    border: 4px solid palegoldenrod;
+}
+
+.titulo{
+    font-size: 2rem;
+    font-family: monospace;
+}
+
+.parrafo{
+    font-size: 1.5rem;
+}
+
+.informacionUser li{
+    font-size: 30px;
+    list-style: none;
+    font-family: serif
+}
+
+.informacionUser img{
+    margin-left: 10px;
+}
+html{
+    @media screen and (max-width: 540px){
+        font-size: 40px;
+    
+    }
+}
+
+

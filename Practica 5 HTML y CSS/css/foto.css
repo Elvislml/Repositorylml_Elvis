@@ -1,62 +1,106 @@
 *{
-    margin: 0px;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-body {
-    font-family: arial;
-    background-image: url("https://31.media.tumblr.com/41c01e3f366d61793e5a3df70e46b462/tumblr_n4vc8sDHsd1st5lhmo1_1280.jpg");
+  
+body{
+    background-color: #eee;
+    font-family: 'Open Sans', sans-serif;
+}
+  
+h1 {
+    color: black;
+    text-align: center;
+}
+  
+  
+.container{
+    width: auto;
+    max-width: 1000px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+}
+  
+  
+.item{
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.095);
+    transition: all 300ms;
+    position: relative;
 }
 
-.foto-descripcion{
-    width: 970px;
-    height: 100px;
-    margin: 25px 10px 0 10px;
-    text-align: center;
+.itemC{
+    max-width: 900px;
+    width: 100%;
+    padding: 45px 20px;
+    margin: 0 auto;
+    margin-top:70px;
+    text-align: justify;
+    border: 4px double firebrick;
+}
+
+.itemC p{
+    margin-left: 30px;
+    padding: 20px;
+}
+
+.itemC h2{
+    padding: 20px;
+    color: teal;
+}
+
+.item-comentarios{
+    padding: 20px;
+}
+
+
+.item::after {
+    background-color: rgba(179, 229, 252, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: scale(0);
+    transition: all 300ms;
+}
+  
+.item:hover:after{
+    opacity: 1;
+    transform: scale(1);
+}
+  
+.item:hover {
+    transform: scale(1.05);
+}
+  
+.item-text{
+    padding: 1em;
+}
+
+  
+.item-img{
+    max-width: 100%;
+    display: block;
+}
+  
+  
+@media screen and (min-width: 590px) {    
+    .container{
+      grid-template-columns: repeat(2, 1fr);
+    }
     
 }
-
-
-.fotos img{
-    padding: 10px;
-    display: inline;
-    text-align: center;
-    width: 280px;
-    margin-bottom: 12px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.fotos a:hover{
-    transform: scale(1.25);
-    box-shadow: 0 3px 6px rgb(0,0, 0, .5);
-    position: relative;
-}
-.fotos span{
-    color: white;
-    text-align: center;
-
-}
-
-.fotos img:hover{
-    transform: scale(1.25);
-}
-
-.fotos textarea {
-    font-family: Garamond,verdana;
-    font-size: 18pt;
-    font-weight: bold;
-    letter-spacing: 5px;
-}
-
-
-#comentarios{
-    position: relative;
-    top: 98em;
-}
-
-#comentarios h2{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
+  
+@media screen and (min-width: 960px) {   
+    .container{
+      grid-template-columns: repeat(3, 1fr);
+    }
 }
