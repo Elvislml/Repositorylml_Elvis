@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <title>Hoteles</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-dark bg-dark">
+        <img src="Imagenes/iconos/icons8-instagram-old-64.png">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-Login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Administracion de Usuarios</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1 class="display-4">DASW</h1>
+        <p class="lead">Crear una interface web para registro de Usuarios</p>
+        <hr class="my-4">
+        <ul>
+            <li>Login</li>
+            <li>Registro</li>
+            <li>Consultas</li>
+        </ul>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Ir a consultas</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="modal-Login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Correo</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <img src="Imagenes/iconos/icons8-customer-64.png" id="user" width="40">
+                                </div>
+                                <input type="text" class="form-control" placeholder="Correo registrado"
+                                    aria-label="Username" aria-describedby="user">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Password</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <img src="Imagenes/iconos/icons8-key-64.png" id="pass" width="40">
+                                </div>
+                                <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                                    aria-describedby="pass">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Login</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <label>Si no tiene cuenta <a href="#" data-toggle="modal" data-target="#modal-Registrar"
+                            data-dismiss="modal">Registrese aqui</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-Registrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar Usuarios</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Nombre o Nombres">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Apellidos">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Tu correo">
+                                    </div>
+                                    <div class="col">
+                                        <input type="password" class="form-control" placeholder="Contraseña">
+                                    </div>
+                                    <div class="col">
+                                        <input type="password" class="form-control" placeholder="Confirma tu Contraseña">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-success" data-dismiss="modal">Login</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <label>Si no tiene cuenta <a href="#" data-dismiss="modal">Registrese aqui</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
