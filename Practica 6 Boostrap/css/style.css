@@ -1,0 +1,48 @@
+.list-unstyled li{
+    margin-left: 100px;
+    margin-bottom: 20px;
+    background-color: khaki;
+}
+
+.media-body{
+    margin-left: 45px;
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 20px;
+}
+
+h5{
+    font-family: monospace;
+    font-size: 25px;
+    color: maroon;
+}
+
+h1{
+    color: crimson
+}
+.form-group{
+    text-align: center;
+}
+
+.form-group #img-girl{
+    width: 200px;
+}
+
+.perfil{
+    margin-left: 55px;
+    margin-top: 10px;
+    margin-right: 55px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.form-group form label{
+    color: crimson;
+}
+
+form{
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
