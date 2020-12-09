@@ -44,7 +44,17 @@ $(document).ready(function(){
 
     $(document).on('click','.task-item',(e)=>{
         const elemento = $(this)[0].activeElement.parentElement.parentElement;
-        const id = $(elemento).attr()
+        const id = $(elemento).attr('taskId');
+        console.log(id);
+
+        $.post('getTareas.php',{id},(response) =>{
+            console.log(response);
+            const task = JSON.parse(response);
+            $('#name').val(task.name);
+            $('#description').val(task.description);
+            $('#id').val(task.id);
+            modificar=true;
+        });
     });
 
 });
