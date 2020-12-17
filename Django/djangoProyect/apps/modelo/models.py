@@ -28,6 +28,7 @@ class Cliente(models.Model):
     celular = models.CharField(max_length = 15, null = False)
     direccion = models.TextField(max_length = 200, null = False)
     date_created = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def _str_(self):
         return self.celular
@@ -48,6 +49,8 @@ class Cuenta(models.Model):
     estado = models.BooleanField(default = True)
     cliente = models.ForeignKey(Cliente, on_delete = models.CASCADE)
     date_created = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
     def _str_(self):
         cadena = str(self.saldo) + ";" + str(self.cuenta_id)
@@ -67,4 +70,6 @@ class Transaccion(models.Model):
     descripcion = models.TextField(default = "Descripccion de la Transaccion")
     cuenta = models.ForeignKey(Cuenta, on_delete = models.CASCADE)
     date_created = models.DateTimeField(auto_now_add = True)
+    updated_at = models.DateTimeField(auto_now=True)
+
 
