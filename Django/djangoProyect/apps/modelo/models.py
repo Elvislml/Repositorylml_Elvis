@@ -31,7 +31,7 @@ class Cliente(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def _str_(self):
-        return self.celular
+        return self.cedula
 
 class Cuenta(models.Model):
 
