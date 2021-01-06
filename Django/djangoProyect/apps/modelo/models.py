@@ -30,7 +30,7 @@ class Cliente(models.Model):
     date_created = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.cedula
 
 class Cuenta(models.Model):
@@ -52,7 +52,7 @@ class Cuenta(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
 
-    def _str_(self):
+    def __str__(self):
         cadena = str(self.saldo) + ";" + str(self.cuenta_id)
         return cadena
 

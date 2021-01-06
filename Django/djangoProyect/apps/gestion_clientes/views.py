@@ -7,7 +7,7 @@ from .forms import FormularioCliente,FormularioCuenta
 def index(request):
     #manejo de ORM
     listaClientes = Cliente.objects.all()
-    return render(request,"clientes/index.html", locals())
+    return render (request,"clientes/index.html", locals())
 
 def crearCliente(request):
     formCliente = FormularioCliente(request.POST)
@@ -37,11 +37,26 @@ def crearCliente(request):
             #ORM    
             cuenta.save()
             return redirect(index)
+
     return render(request,"clientes/crear.html", locals())
 
 
-def modificarCliente(request, cedula):
-    return render(request, 'clientes/modificar.html', locals())
+def modificarCliente(request, cliente_id):
+    cliente = Cliente.objects.get(cliente_id = cliente_id)
+    data = {
+        "formCliente" : FormularioCliente(instance = cliente)
+    }
 
-def modificarCuenta(request):
-    return render(request,"Hola crear")
+    if request.method == 'POST':
+        formCliente = FormularioCliente(data = request.POST, instance=cliente)
+        if formCliente.is_valid():
+            formCliente.save()
+            data['mensaje'] = "Modificado con exito"
+            data["formCliente"] = formCliente
+    return render(request, 'clientes/modificar.html', data)
+
+
+def eliminarCliente(request, cliente_id):
+    cliente = Cliente.objects.get(cliente_id=cliente_id)
+    cliente.delete()
+    return redirect(to="clientes")

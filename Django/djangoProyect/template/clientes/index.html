@@ -49,11 +49,17 @@
                     <tbody id="tasks">
                         {%for cliente in listaClientes %}
                         <tr>
-                            <td><a href="{% url 'modificarClientes' cliente.cedula%}">{{cliente.cedula}}</a></td>
+                            <td>{{cliente.cedula}}</td>
                             <td>{{cliente.apellidos}}</td>
                             <td>{{cliente.nombres}}</td>
                             <td>{{cliente.correo}}</td>
                             <td>++|--</td>
+                            <td>
+                                <a href="{% url 'modificarClientes' cliente.cliente_id %}">Modificar</a>
+                            </td>
+                            <td>
+                                <a href="{% url 'eliminarClientes' cliente.cliente_id %}">Eliminar</a>
+                            </td>
                         </tr>
                         {%endfor%}
                     </tbody>
