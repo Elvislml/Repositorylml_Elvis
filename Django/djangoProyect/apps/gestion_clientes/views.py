@@ -1,14 +1,17 @@
 from django.shortcuts import render,redirect
+from django.contrib.auth.decorators import login_required
 from apps.modelo.models import Cliente
 from apps.modelo.models import Cuenta
 from .forms import FormularioCliente,FormularioCuenta
-# Create your views here.
 
+# Create your views here.
+@login_required
 def index(request):
     #manejo de ORM
     listaClientes = Cliente.objects.all()
     return render (request,"clientes/index.html", locals())
 
+@login_required
 def crearCliente(request):
     formCliente = FormularioCliente(request.POST)
     formCuenta = FormularioCuenta(request.POST)
