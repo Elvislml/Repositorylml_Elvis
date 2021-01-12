@@ -63,3 +63,24 @@ def eliminarCliente(request, cliente_id):
     cliente = Cliente.objects.get(cliente_id=cliente_id)
     cliente.delete()
     return redirect(to="clientes")
+
+
+def crearCuenta(request, cedula):
+    formCuenta = FormularioCuenta(request.POST)
+    cliente = Cliente.objects.get(cedula = cedula)
+    if request.method == 'POST':
+        if formCuenta.is_valid():
+            cuenta = Cuenta()
+            datos_cuenta = formCuenta.cleaned_data
+            cuenta.numero = datos_cuenta.get("numero")
+            cuenta.saldo = datos_cuenta.get("saldo")
+            cuenta.tipoCuenta = datos_cuenta.get("tipoCuenta")
+            cuenta.cliente = cliente
+            cuenta.save()
+            return redirect(index)
+    return render(request, 'clientes/crearCuentas.html', locals())
+
+def cuentaIndex(request):
+    #manejo de ORM
+    listaCuentas = Cuenta.objects.all()
+    return render (request,"clientes/crearCuentas.html", locals())
