@@ -2,7 +2,8 @@
     include('database.php');
     
     if (isset($_POST['id'])) {
-        $query = "SELECT * FROM task WHERE id = " . $_POST['id'];
+        $id = $_POST["id"];
+        $query = "SELECT * FROM task WHERE id = '$id'";
         $result = mysqli_query($conexion,$query);    
         if(!$result){
             die('Query con problemas' . mysqli_error($conexion));
