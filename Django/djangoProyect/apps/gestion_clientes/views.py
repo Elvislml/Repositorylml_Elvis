@@ -5,13 +5,13 @@ from apps.modelo.models import Cuenta
 from .forms import FormularioCliente,FormularioCuenta
 
 # Create your views here.
-@login_required
+
 def index(request):
     #manejo de ORM
     listaClientes = Cliente.objects.all()
     return render (request,"clientes/index.html", locals())
 
-@login_required
+
 def crearCliente(request):
     formCliente = FormularioCliente(request.POST)
     formCuenta = FormularioCuenta(request.POST)
@@ -30,15 +30,6 @@ def crearCliente(request):
             cliente.direccion = datos_cliente.get('direccion')
             #ORM
             cliente.save()
-
-            cuenta = Cuenta()
-            datos_cuenta = formCuenta.cleaned_data
-            cuenta.numero = datos_cuenta.get('numero')
-            cuenta.saldo = datos_cuenta.get('saldo')
-            cuenta.tipoCuenta = datos_cuenta.get('tipoCuenta')
-            cuenta.cliente = cliente
-            #ORM    
-            cuenta.save()
             return redirect(index)
 
     return render(request,"clientes/crear.html", locals())
@@ -64,6 +55,13 @@ def eliminarCliente(request, cliente_id):
     cliente.delete()
     return redirect(to="clientes")
 
+#Cuentas
+
+def listarCuentas(request, cedula):
+    cliente = Cliente.objects.get(cedula=cedula)
+    cuentas = Cuenta.objects.filter(cliente = cliente)
+    return render(request, 'cuentas/index.html', locals())
+
 
 def crearCuenta(request, cedula):
     formCuenta = FormularioCuenta(request.POST)
@@ -78,9 +76,24 @@ def crearCuenta(request, cedula):
             cuenta.cliente = cliente
             cuenta.save()
             return redirect(index)
-    return render(request, 'clientes/crearCuentas.html', locals())
+    return render(request, 'cuentas/crearCuentas.html', locals())
 
-def cuentaIndex(request):
-    #manejo de ORM
-    listaCuentas = Cuenta.objects.all()
-    return render (request,"clientes/crearCuentas.html", locals())
+def modificarCuenta(request, numero):
+    cuenta = Cuenta.objects.get(numero = numero)
+    data = {
+        "formCuenta" : FormularioCuenta(instance = cuenta)
+    }
+
+    if request.method == 'POST':
+        formCuenta = FormularioCuenta(data = request.POST, instance=cuenta)
+        if formCuenta.is_valid():
+            formCuenta.save()
+            data['mensaje'] = "Modificado con exito"
+            data['formCuenta'] = formCuenta
+    return render(request, 'cuentas/modificarCuentas.html', data)
+
+
+def eliminarCuenta(request, numero):
+    cuenta = Cuenta.objects.get(numero = numero)
+    cuenta.delete()
+    return redirect(to="clientes")
