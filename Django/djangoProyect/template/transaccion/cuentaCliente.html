@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
-    <title>Tabla Clientes</title>
+    <title>Tabla Cuentas</title>
 </head>
 
 <body>
@@ -29,51 +29,28 @@
             </div>
         </div>
     </nav>
-    <form method="POST" style="text-align: center; margin-top: 20px;">{% csrf_token %}
-        <input name="busqueda" placeholder="Ingrese su busqueda">
-        <button type="submit">Buscar</button>
-    </form>
 
     <div class="container">
+        Cliente : {{cliente.nombres}} {{cliente.apellidos}}<br>
+        Cedula : {{cliente.cedula}}<br>
+        Correo : {{cliente.correo}} <br>
+        Saldo : {{cuenta.saldo}} <br>
+        Estado : {{cuenta.estado}}<br>
         <div class="row p-4">
             <div class="col-md-7">
                 <div id="task-resukt">
                     <ul id="container"></ul>
                 </div>
                 <table class="table table-bordered table-sm table-dark table-hover">
-                    <thead>
-                        <tr>
-                            <th>Cedula</th>
-                            <th>Nombres</th>
-                            <th>Apellidos</th>
-                            <th>Correo</th>
-                            <th>Opciones</th>
-                        </tr>
-                    </thead>
                     <tbody id="tasks">
-                        {%for cliente in listaClientes %}
                         <tr>
-                            <td>{{cliente.cedula}}</td>
-                            <td>{{cliente.apellidos}}</td>
-                            <td>{{cliente.nombres}}</td>
-                            <td>{{cliente.correo}}</td>
-                            <td>++|--</td>
-                            <td>
-                                <a href="{% url 'cuentas' cliente.cedula %}">Cuentas</a>
-                            </td>
-                            <td>
-                                <a href="{% url 'modificarClientes' cliente.cliente_id %}">Modificar</a>
-                            </td>
-                            <td>
-                                <a href="{% url 'eliminarClientes' cliente.cliente_id %}">Eliminar</a>
-                            </td>
+                            <td><a href="{% url 'depositar' cuenta.numero%}">Deposito</a></td>
+                            <td>Retiro</td>
                         </tr>
-                        {%endfor%}
                     </tbody>
                 </table>
             </div>
         </div>
-        <a href="{% url 'crearClientes' %}">Nuevo Cliente</a>
     </div>
 </body>
 
