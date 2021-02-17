@@ -42,6 +42,16 @@ def crearCliente(request):
             cliente.direccion = datos_cliente.get('direccion')
             #ORM
             cliente.save()
+
+            # ORM
+            cuenta = Cuenta()
+            datos_cuenta = formCuenta.cleaned_data
+            cuenta.numero = datos_cuenta.get("numero")
+            cuenta.saldo = datos_cuenta.get("saldo")
+            cuenta.tipoCuenta = datos_cuenta.get("tipoCuenta")
+            cuenta.cliente = cliente
+            #ORM
+            cuenta.save()
             return redirect(index)
 
     return render(request,"clientes/crear.html", locals())
