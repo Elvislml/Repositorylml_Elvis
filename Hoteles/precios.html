@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <title>Hoteles</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Hoteles</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html">Nosotros</a></li>
+                <li class="nav-item active"><a class="nav-link" href="#">Precios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Términos</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contacto.html">Contactos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <h1>Hoteles</h1>
+    </div>
+
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">
+                    <a href="./index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Precios</li>
+            </ol>
+        </nav>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="tab">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#compara" role="tab"
+                    aria-controls="home" aria-selected="true">Tabla</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#tarjetas" role="tab"
+                    aria-controls="profile" aria-selected="false">Tarjetas</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="messages-tab" data-toggle="tab" href="#comentarios" role="tab"
+                    aria-controls="messages" aria-selected="false">Comentarios</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="compara" role="tabpanel" aria-labelledby="compara-tab ">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                        <th>Calidad</th>
+                        <th>Pinamar</th>
+                        <th>Mar del Plata</th>
+                        <th>San Clemente</th>
+                        <th>Sta Teresita</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1<span class="oi oi-star"></span></td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                        <tr>
+                            <td>2<span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                            </td>
+                            <td>$1010</td>
+                            <td>$1550</td>
+                            <td>$1900</td>
+                            <td>$2500</td>
+                        </tr>
+                        <tr>
+                            <td>3<span class="oi oi-star"></span></td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                        <tr>
+                            <td>4<span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                            </td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                        <tr>
+                            <td>5<span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                                <span class="oi oi-star"></span>
+                            </td>
+                            <td>$1000</td>
+                            <td>$1500</td>
+                            <td>$1800</td>
+                            <td>$2000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane" id="tarjetas" role="tabpanel" aria-labelledby="tarjetas-tab">
+
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Tarjeta Basica
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Puedes reservar en tres meses sin interes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                    Tarjeta VIP
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Puedes reservaren 6 cuotas sin interes.
+                                Al legar, recibiras una canasta de obsequios para disfrutar
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                    data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree">
+                                    Tarjeta Black
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Tarjeta no Aceptada
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="comentarios" role="tabpanel" aria-labelledby="comentarios-tab">
+                <div>
+                    Comentanos aca
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="col-sm-4 d-flex flex-column">
+                <a href="http://www.facebook.com">facebook</a>
+                <a href="http://www.twitter.com">twitter</a>
+                <a href="http://www.instagram.com">instagram</a>
+                <a href="http://www.google.com.ec">google</a>
+            </div>
+
+            <div class="col-sm-4">
+                <address>
+                    <h3>Oficina Central</h3>
+                    <p><span class="oi oi-home footer-address-icon"> Plateado, Loja-Ecuador</span></p>
+                    <p><span class="oi oi-phone footer-address-icon"> +59398023638</span></p>
+                    <p><span class="oi oi-inbox footer-address-icon"> luissar14@gmail.com</span></p>
+                </address>
+            </div>
+            <div class="col-sm-4 d-flex flex-column align-items-end">
+                <a href="http://www.facebook.com">Nosotros</a>
+                <a href="http://www.twitter.com">Precios</a>
+                <a href="http://www.instagram.com">Terminos y condiciones</a>
+                <a href="http://www.google.com.ec">Contactos</a>
+            </div>
+        </div>
+    </footer>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
