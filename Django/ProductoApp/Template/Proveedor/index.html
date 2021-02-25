@@ -1,0 +1,44 @@
+{% extends 'master.html' %}
+
+{% block contenido %}
+
+<div class="container">
+    <div class="row p-4">
+        <table class="table table-info">
+            <thead>
+                <tr class="table table-dark">
+                    <th>Cedula</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Correo</th>
+                    <th>Celular</th>
+                    <th>Direccion</th>
+                    <th>Productos</th>
+                </tr>
+            </thead>
+            <tbody id="tasks">
+                {%for proveedor in listaProveedores %}
+                <tr>
+                    <td>{{proveedor.cedula}}</td>
+                    <td>{{proveedor.nombre}}</td>
+                    <td>{{proveedor.apellido}}</td>
+                    <td>{{proveedor.correo}}</td>
+                    <td>{{proveedor.celular}}</td>
+                    <td>{{proveedor.direccion}}</td>
+                    <td>
+                        <a href="{% url 'productos' proveedor.cedula %}">Productos</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'modificarProveedor' proveedor.proveedor_id %}">Modificar</a>
+                    </td>
+                    <td>
+                        <a href="{% url 'eliminarProveedor' proveedor.proveedor_id %}">Eliminar</a>
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    <a href="{% url 'crearProveedor' %}"><button type="submit" class="btn btn-primary">Nuevo Proveedor</button></a>
+</div>
+{% endblock %}
