@@ -1,0 +1,25 @@
+h1{
+    color: aqua;
+}
+h2{
+    color:brown;
+}
+
+h3{
+    color: blueviolet;
+}
+
+/*Selector por clase */
+.box{
+    background-color: chartreuse;
+    color: blue;
+}
+
+.caja{
+    background-color: cornflowerblue;
+    color:cyan;
+}
+
+#lista{
+    background-color: aquamarine;
+}
