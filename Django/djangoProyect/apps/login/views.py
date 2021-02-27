@@ -7,7 +7,7 @@ from .forms import FormularioLogin
 # Create your views here.
 def autenticar(request):
     if request.method == 'POST':
-        formulario = FormularioLogin(request.POST)
+        formulario = FormularioLogin(request.POST or None)
         if formulario.is_valid():
             usuario = request.POST['username']
             clave = request.POST['password']
@@ -15,7 +15,7 @@ def autenticar(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponseRedirect(reverse('homepage'))
+                    return HttpResponseRedirect(reverse('welcome'))
     else:
         formulario = FormularioLogin()
     context = {
@@ -28,8 +28,6 @@ def autenticar(request):
 def desautenticar(request):
     return redirect (request, '/')
 
-def welcome (request):
-    return (request, 'login/welcome.html')
 
 def forbidden (request):
     return (request, 'login/forbidden.html')

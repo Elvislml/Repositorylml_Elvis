@@ -1,0 +1,30 @@
+.container {
+    background: blanchedalmond;
+    max-width: 50%;
+    margin-top: 100px;
+    border: black 1px;
+}
+
+.formLogin {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    font-size: 25px;
+}
+.tabla {
+    margin-top: 20px;
+}
+.formLogin img{
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.btn {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 50px;
+}
+

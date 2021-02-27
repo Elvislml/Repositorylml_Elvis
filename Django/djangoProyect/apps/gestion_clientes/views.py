@@ -25,8 +25,8 @@ def index(request):
 
 @login_required
 def crearCliente(request):
-    formCliente = FormularioCliente(request.POST)
-    formCuenta = FormularioCuenta(request.POST)
+    formCliente = FormularioCliente(request.POST or None)
+    formCuenta = FormularioCuenta(request.POST or None)
     if request.method == 'POST':
         if formCliente.is_valid() and formCuenta.is_valid():
             cliente = Cliente()
@@ -86,7 +86,7 @@ def listarCuentas(request, cedula):
 
 
 def crearCuenta(request, cedula):
-    formCuenta = FormularioCuenta(request.POST)
+    formCuenta = FormularioCuenta(request.POST or None)
     cliente = Cliente.objects.get(cedula = cedula)
     if request.method == 'POST':
         if formCuenta.is_valid():
@@ -112,6 +112,7 @@ def modificarCuenta(request, numero):
             formCuenta.save()
             data['mensaje'] = "Modificado con exito"
             data['formCuenta'] = formCuenta
+        return redirect(index)
     return render(request, 'cuentas/modificarCuentas.html', data)
 
 

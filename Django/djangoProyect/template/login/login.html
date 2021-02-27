@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'CSS/login.css' %}">
     <title>Document</title>
 </head>
 
@@ -21,10 +23,14 @@
 
     <div class="container">
         <form method="POST" class="row g-3" style="padding: 20px;"> {% csrf_token %}
-            <div class="col-md-6">
-                {{formulario.as_p}}
+            <div class="formLogin col-md-6" >
+                <h1 style="text-align: center;">Login</h1>
+                <img src="{% static 'Img/Login.png' %}">
+                <table class="tabla">
+                    {{formulario.as_table}}
+                </table>
             </div>
-            <div class="col-12">
+            <div class="boton col-12">
                 <button type="submit" type="button" class="btn btn-primary">Ingresar</button>
             </div>
         </form>
