@@ -1,7 +1,6 @@
 {
   "user": [
     {
-      "id": 1,
       "nombre": "Elvis",
       "apellido": "Burgos",
       "cedula": "1104956789",
@@ -9,7 +8,6 @@
       "telefono" : "072569478"
     },
     {
-      "id": 2,
       "nombre": "Carlos",
       "apellido": "Ordoñes",
       "cedula": "1104951460",
@@ -17,7 +15,6 @@
       "telefono": "072569321"
     },
     {
-      "id": 3,
       "nombre": "Lilina",
       "apellido": "Burgos",
       "cedula": "1102659871",
