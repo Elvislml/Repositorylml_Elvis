@@ -1,22 +1,26 @@
 {
-"users": [
-{
-"id": 1,
-"nombre": "Elvis",
-"apellido": "Burgos",
-"cedula": "1104956789"
-},
-{
-"id": 2,
-"nombre": "Carlos",
-"apellido": "Ordoñes",
-"cedula": "1104951460"
-},
-{
-"id": 3,
-"nombre": "Lilina",
-"apellido": "Burgos",
-"cedula": "1102659871"
-}
-]
+  "user": [
+    {
+      "id": 1,
+      "nombre": "Elvis",
+      "apellido": "Burgos",
+      "cedula": "1104956789"
+    },
+    {
+      "id": 2,
+      "nombre": "Carlos",
+      "apellido": "Ordoñes",
+      "cedula": "1104951460"
+      
+    },
+    {
+      "id": 3,
+      "nombre": "Lilina",
+      "apellido": "Burgos",
+      "cedula": "1102659871"
+    },
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
