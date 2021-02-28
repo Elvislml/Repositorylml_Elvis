@@ -13,8 +13,8 @@
       "nombre": "Carlos",
       "apellido": "Ordoñes",
       "cedula": "1104951460"
-      "direccion" : "Sauces"
-      "telefono" : "072569321"
+      "direccion": "Sauces"
+      "telefono": "072569321"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "apellido": "Burgos",
       "cedula": "1102659871"
       "direccion": "Las Acacias"
-      "telefono" : "072569789"
+      "telefono": "072569789"
     }
   ]
 }
