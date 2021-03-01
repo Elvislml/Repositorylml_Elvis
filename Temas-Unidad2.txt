@@ -1,0 +1,5 @@
+Los temas de la Unidad 2 son :
+- La carpeta Django
+- La carpeta LumenProyects
+- Dentro de Lumen Proyects se encuentra la BD, no olvidar cambiar el user, y contraseña si se quieres utilizar en otra maquina, 
+  cambiar esto en el archivo .env de cooperativasw y en settings de el Django_Proyect que se encuentra dentro de la carpte de lummen
