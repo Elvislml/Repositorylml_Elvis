@@ -1,0 +1,25 @@
+{
+  "user": [
+    {
+      "nombre": "Elvis",
+      "apellido": "Burgos",
+      "cedula": "1104956789",
+      "direccion": "Grecia-Holanda",
+      "telefono" : "072569478"
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "Ordoñes",
+      "cedula": "1104951460",
+      "direccion": "Sauces",
+      "telefono": "072569321"
+    },
+    {
+      "nombre": "Lilina",
+      "apellido": "Burgos",
+      "cedula": "1102659871",
+      "direccion": "Las Acacias",
+      "telefono": "072569789"
+    }
+  ]
+}
