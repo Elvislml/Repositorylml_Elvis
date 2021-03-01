@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityDBDocente">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtCedulaHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Ingrese la Cedula"/>
+
+        <EditText
+            android:id="@+id/txtNombresHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Ingrese su Nombre"/>
+
+        <EditText
+            android:id="@+id/txtApellidosHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Ingrese su Apellido" />
+
+        <Button
+            android:id="@+id/btnGuardasH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insertar" />
+
+        <Button
+            android:id="@+id/btnModificarH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar" />
+
+        <Button
+            android:id="@+id/btnEliminarTodoH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EliminarTodo" />
+
+        <Button
+            android:id="@+id/btnEliminarCedulaH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Cedula" />
+
+        <TextView
+            android:id="@+id/lbldatosHelper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

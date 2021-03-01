@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/optionActivities"
+        android:title="Actividades">
+        <menu>
+            <item
+                android:id="@+id/opcionParametros"
+                android:title="Parametros"/>
+
+            <item
+                android:id="@+id/opcionLogin"
+                android:title="Login"/>
+
+            <item
+                android:id="@+id/optionFragmentos"
+                android:title="Fragmentos"/>
+            <item
+                android:id="@+id/opcionDialogo"
+                android:title="Dialogo"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/opcionSensores"
+        android:title="Sensores">
+
+        <menu>
+            <item
+                android:id="@+id/opcionAcelerometro"
+                android:title="Acelerometro"/>
+
+            <item
+                android:id="@+id/opcionProximidad"
+                android:title="Proximidad"/>
+        </menu>
+    </item>
+</menu>
